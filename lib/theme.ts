@@ -1,4 +1,4 @@
-import { createTheme } from "@nextui-org/react"
+import { createTheme, globalCss } from "@nextui-org/react"
 
 export const lightTheme = createTheme({
     type: 'light',
@@ -10,6 +10,15 @@ export const lightTheme = createTheme({
 export const darkTheme = createTheme({
     type: 'dark',
     theme: {
-        colors: {}, // optional
+        colors: {
+
+        }, // optional
+    }
+})
+
+export const globalStyles = globalCss({
+    body: {
+        /* Enable GPU Rendering */
+        transform: 'translateZ(0)',
     }
 })
