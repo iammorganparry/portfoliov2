@@ -4,7 +4,6 @@ import { HTML5 } from 'components/icons/HTML5'
 import { Python } from 'components/icons/Python'
 import { ReactIcon } from 'components/icons/ReactIcons'
 import { TypscriptIcon } from 'components/icons/Typscript'
-import { SiTypescript, SiPython, SiReact, SiHtml5, SiCss3, SiGo } from 'react-icons/si'
 
 export const skills = [
     {

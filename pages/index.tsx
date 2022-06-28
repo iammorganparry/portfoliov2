@@ -1,10 +1,6 @@
-import { styled, Text, Image, User, Grid, Container, Button, Link, Spacer, Card, Progress, Row } from '@nextui-org/react'
-import Layout from '../components/Layout'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { Grid, Row, Text } from '@nextui-org/react'
 import { ExperienceCard } from 'components/ExperienceCard'
-import { skills } from 'data/skills'
-import { Skill } from 'components/Skill'
-import { Sidebar } from 'components/Sidebar'
+import Layout from '../components/Layout'
 
 const IndexPage = () => {
   return (

@@ -1,5 +1,4 @@
-import { Card, Grid, Text, Link, styled } from "@nextui-org/react"
-import { motion } from "framer-motion"
+import { Card, Grid, Link, Text } from "@nextui-org/react"
 import { HoverCard } from "./framer"
 type ExperienceCardProps = {
     company: string
