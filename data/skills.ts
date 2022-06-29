@@ -27,20 +27,20 @@ export const skills = [
     },
     {
         name: "CSS3",
-        level: 90,
+        level: 100,
         Icon: CSS3,
         tooltip: 'Expert'
 
     },
     {
         name: "Python",
-        level: 70,
+        level: 80,
         Icon: Python,
         tooltip: 'Skilled'
     },
     {
         name: "GO",
-        level: 60,
+        level: 40,
         Icon: GoLang,
         tooltip: 'Skilled'
     }
