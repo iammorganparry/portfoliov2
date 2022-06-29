@@ -1,4 +1,4 @@
-import { Card, Progress, Text } from "@nextui-org/react"
+import { Card, Popover, Progress, styled, Text } from "@nextui-org/react"
 import { IconType } from "react-icons"
 import { HoverCard } from "./framer"
 
@@ -10,18 +10,38 @@ type SkillProps = {
     index: number
 }
 
+const StitchesDiv = styled('div', {
+    display: 'flex', flexDirection: 'row nowrap', alignItems: 'center',
+    '& svg': {
+        marginRight: '$5',
+    }
+})
+
 export const Skill = ({ name, level, Icon, tooltip, index }: SkillProps) => {
     return (
-        <HoverCard animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.1 }}
-            css={{ m: '$6 0', opacity: 0 }}>
-            <Card.Body>
-                <Text css={{ display: 'inline-flex', alignItems: 'center', m: '0 $5' }}>
-                    <Icon style={{ display: 'inline-flex' }} size={30} />
+        <Popover>
+            <Popover.Trigger>
+                <HoverCard
+                    isPressable
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    css={{ m: '$6 0', opacity: 0 }}>
+                    <Card.Body>
+                        {/* <Text b css={{ display: 'inline-flex', alignItems: 'center', m: '$5 0' }}>
                     {name}
-                </Text>
-                <Progress shadow value={level} color='gradient' />
-            </Card.Body>
-        </HoverCard>
+                </Text> */}
+                        <StitchesDiv>
+                            <Icon style={{ display: 'flex' }} size={30} />
+                            <Progress shadow value={level} color='gradient' css={{ display: 'flex' }} />
+                        </StitchesDiv>
+                    </Card.Body>
+                </HoverCard >
+            </Popover.Trigger>
+            <Popover.Content>
+                <Card.Body>
+                    <Text size={20}>{name}</Text>
+                </Card.Body>
+            </Popover.Content>
+        </Popover>
     )
 }

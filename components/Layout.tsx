@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
 import { Grid, styled } from '@nextui-org/react'
+import Head from 'next/head'
+import { ReactNode } from 'react'
 import { Sidebar } from './Sidebar'
 
 type Props = {
@@ -27,7 +27,7 @@ const BlurBackground = styled('div', {
   // backgroundImage: 'linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%)',
   position: 'fixed',
   width: '100%',
-  height: '101vh',
+  height: '100vh',
   margin: 0,
   padding: 0,
   top: 0,
@@ -38,9 +38,6 @@ const BlurBackground = styled('div', {
 })
 
 
-const Foreground = styled('div', {
-  zIndex: 2,
-})
 const Layout = ({ children, title = 'Morgan Parry | Portfolio' }: Props) => (
   <>
     <Head>

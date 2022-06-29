@@ -19,6 +19,7 @@ export const darkTheme = createTheme({
 export const globalStyles = globalCss({
     body: {
         /* Enable GPU Rendering */
+        overflow: "hidden",
         transform: 'translateZ(0)',
     }
 })
